@@ -1,0 +1,312 @@
+@font-face {
+    font-family: "RalewayLight";
+    src: local("Raleway"), url("./fonts/Raleway/static/Raleway-Light.ttf") format("truetype");
+    font-weight: 100;
+}
+@font-face {
+    font-family: "RalewayBold";
+    src: local("Raleway"), url("./fonts/Raleway/static/Raleway-Bold.ttf") format("truetype");
+    font-weight: 100 500;
+}
+@font-face {
+    font-family: "Merriweather";
+    src: local("Merriweather"), url("./fonts/Merriweather_Sans/static/MerriweatherSans-Medium.ttf") format("truetype");
+    font-weight: 100 500;
+}
+@font-face {
+    font-family: "MavenPro";
+    src: local("MavenPro"), url("./fonts/Maven_Pro/static/MavenPro-Regular.ttf") format("truetype");
+    font-weight: 100 500;
+}
+
+
+body {
+    padding: 0 !important;
+}
+.wrapper {
+    overflow-y: scroll;
+    text-align: center;
+    display: flex;
+    min-height: 90vh;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    font-family: MavenPro;
+}
+
+.navButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 80px;
+    font-size: 25px;
+    margin-top: 10px;
+    width: min(500px, 80vw);
+    font-family: RalewayLight;
+    font-weight: 200;
+}
+
+.textfield {
+    background-color: lightgray;
+}
+
+/*Form */
+.auth-form-container, .login-form, .register-form {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    margin-bottom: 40px;
+}
+
+/*Just add border if screen big enough*/
+@media screen and (min-width: 600px) {
+    .auth-form-container {
+        padding: 5rem;
+        border: 1px solid #000000;
+        border-radius: 10px;
+        margin: 0.5rem;
+    }
+}
+
+input {
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+}
+
+h2 {
+    padding: 5px;
+    font-family: RalewayLight;
+    font-style: normal;
+}
+
+.errMsg {
+    color: darkred
+}
+
+.topBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    top: 0px;
+    height: min(15vh, 90px);
+    width: 100%;
+    font-family: Merriweather;
+}
+.topBar > .imageContainer {
+    padding-left: 10px;
+    height: 60%;
+    width: 60%;
+}
+    .topBar img {
+        height: 100%;
+
+    }
+
+.list {
+    display: block;
+}
+
+.link-btn {
+    color: black;
+    background: none;
+    text-decoration: underline;
+    padding: 0;
+}
+
+.image {
+    height: 50%;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-top: 10px;
+    margin-right: auto;
+    object-fit: contain;
+}
+
+.tableContainer {
+    display: flex;
+    flex-direction: column;
+    height: max(50vh, 300px);
+    width: 100%;
+    overflow: auto;
+}
+    .tableContainer table {
+        margin-left: auto;
+        margin-right: auto;
+        width: min(800px, 95%);
+    }
+
+.modal {
+    color: white;
+    margin: 0 auto;
+    height: 70%;
+    width: min(500px, 80%);
+    top: 50%;
+    transform: translate(0, 20%);
+    font-size: 12px;
+    background-color: rgb(70, 70, 70, 1);
+    border-radius: 10px;
+    overflow: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-family: Merriweather;
+}
+
+    .modal > .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid gray;
+        font-size: 30px;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .modal > .content {
+        width: 94%;
+        padding: 10px 5px;
+    }
+        .content > .bodySpan {
+            font-family: RalewayLight;
+            font-size: 20px;
+        }
+
+    .modal > .actions {
+        width: 94%;
+        padding: 10px 5px;
+        margin: auto;
+        text-align: center;
+    }
+    .modal > .actionsEditAccount {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        text-align: center;
+    }
+
+.modalStatusPicker {
+    color: white;
+    margin: 0 auto;
+    width: 300px;
+    top: 50%;
+    transform: translate(0, 30%);
+    font-size: 12px;
+    background-color: rgb(90, 90, 90, 1);
+    border-radius: 10px;
+    border: 4px solid gray;
+    overflow: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    font-family: Merriweather;
+}
+
+    .modalStatusPicker > .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid gray;
+        font-size: 30px;
+        text-align: center;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+
+    .modalStatusPicker > .content {
+        width: 94%;
+        padding: 10px 5px;
+    }
+
+    .modalStatusPicker > .actions {
+        display: flex;
+        flex-direction: column;
+        width: 84%;
+        padding: 10px 5px;
+        margin: auto;
+        text-align: center;
+    }
+
+.modalConfirm {
+    color: white;
+    margin: 0 auto;
+    width: 300px;
+    top: 50%;
+    transform: translate(0, 20%);
+    font-size: 12px;
+    background-color: rgb(90, 90, 90, 1);
+    border-radius: 10px;
+    border: 4px solid gray;
+    overflow: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    font-family: Merriweather;
+}
+    .modalConfirm > .content {
+        display: flex;
+        flex-direction: column;
+        width: 94%;
+        padding: 10px 5px;
+    }
+
+/*TABLE STYLING*/
+th,
+td {
+    width: 1%;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+th {
+    text-align: left;
+    font-size: 20px;
+}
+
+thead {
+    background-color: #bf9930;
+    position: sticky;
+    top: 0;
+    z-index: 15;
+}
+
+tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+tbody td {
+    background-color: #919191;
+    position: relative;
+}
+
+    tbody td:hover:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.2);
+        z-index: -1;
+    }
+.ellipsis {
+}
+
+    .ellipsis:before {
+        content: ' ';
+        visibility: hidden;
+    }
+
+    .ellipsis span {
+        font-size: 20px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    } 
